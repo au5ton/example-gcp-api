@@ -1,4 +1,10 @@
 
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
+const readFile = util.promisify(require('fs').readFile);
+const path = require('path');
+const chalk = require('chalk');
+
 (async function() {
 
     /**
@@ -25,15 +31,13 @@
       }
     }
   
-    const util = require('util');
-    const exec = util.promisify(require('child_process').exec);
-    const readFile = util.promisify(require('fs').readFile);
-    const path = require('path');
-    const chalk = require('chalk');
-  
+    console.log(chalk.yellowBright.bold('predeploy.js'));
+    console.log(chalk.yellowBright.bold('============'));
+    
+
     const config = JSON.parse(await readFile(path.join(__dirname, '..', '..', '..', 'config.json')));
     let cmd = 'firebase functions:config:set ';
-  
+
     for(let namespace of Object.keys(config)) {
       check(namespace, 0);
       for(let key of Object.keys(config[namespace])) {
@@ -43,12 +47,12 @@
       }
     }
   
-    console.log(cmd);
+    console.log(chalk.bgBlack.greenBright(`\t$ ${cmd}`));
   
     const { stdout, stderr } = await exec(cmd);
-    console.log('stdout:', stdout);
-    console.log('stderr:', stderr);
+    console.log(stdout);
+    console.log(stderr);
   
-    console.log(`Expected to be accessible at: https://${config.gcp.datacenter}-${config.gcp.project_id}.cloudfunctions.net/`);
+    
   
   })();

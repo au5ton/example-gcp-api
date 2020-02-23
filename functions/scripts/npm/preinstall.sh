@@ -12,11 +12,11 @@ cat <<EOT >> ../config.json
 {
     "telegram": {
         "bot_token": "",
-        "webhookSecret": ""
+        "webhook_secret": ""
     },
     "gcp": {
         "datacenter": "us-central1",
-        "projectId": ""
+        "project_id": ""
     }
 }
 EOT

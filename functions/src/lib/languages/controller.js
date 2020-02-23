@@ -22,3 +22,7 @@ module.exports.getLanguage = (req, res) => {
                   data: exists ? lang[0] : `Language not found`
               })
 }
+
+module.exports.getConfig = (req, res) => {
+    return res.json(require('../config'))
+}
