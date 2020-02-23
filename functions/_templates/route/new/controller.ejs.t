@@ -1,3 +1,7 @@
+---
+to: src/lib/<%= name %>/controller.js
+---
+
 const languages = [
     { name: 'English', code: 'en_us' },
     { name: 'Spanish', code: 'es_sp' },
