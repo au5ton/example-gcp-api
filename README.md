@@ -1,7 +1,7 @@
 serverless-api
 ===========================
 
-Example Express.js setup for an API server on Firebase Functions. [Inspired by this Medium post](https://medium.com/p/a20b536c6aec).
+Serverless Express.js stack for an API server on Firebase Functions. [Inspired by this Medium post](https://medium.com/p/a20b536c6aec).
 
 ## Features
 
