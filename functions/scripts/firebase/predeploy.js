@@ -35,7 +35,7 @@ const chalk = require('chalk');
     console.log(chalk.yellowBright.bold('============'));
     
 
-    const config = JSON.parse(await readFile(path.join(__dirname, '..', '..', '..', 'config.json')));
+    const config = JSON.parse(await readFile(path.join(__dirname, '..', '..', 'config.json')));
     let cmd = 'firebase functions:config:set ';
 
     for(let namespace of Object.keys(config)) {
