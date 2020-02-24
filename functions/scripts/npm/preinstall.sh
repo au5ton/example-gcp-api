@@ -4,7 +4,7 @@ YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 # test if config.json already exists
-if test -f ../config.json; then
+if test -f ./config.json; then
     exit
 fi
 
