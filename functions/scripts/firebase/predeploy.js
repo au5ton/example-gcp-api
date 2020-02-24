@@ -39,8 +39,14 @@ const chalk = require('chalk');
     let cmd = 'firebase functions:config:set ';
 
     for(let namespace of Object.keys(config)) {
+      // config.json keys that start with _ are private and local only
+      if(namespace.startsWith('_')) continue;
+
       check(namespace, 0);
       for(let key of Object.keys(config[namespace])) {
+        // config.json keys that start with _ are private and local only
+        if(key.startsWith('_')) continue;
+
         check(key, 1);
         // spaces and other mess might fuck this up
         cmd += `${namespace}.${key}="${config[namespace][key]}" `;

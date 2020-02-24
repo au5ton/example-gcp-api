@@ -1,8 +1,16 @@
-var assert = require('assert');
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1, 2, 3].indexOf(4), -1);
+const assert = require('assert');
+const firebase = require('../src/lib/firebase');
+describe('Test', function() {
+    it('', async function() {
+
+        const db = firebase.firestore()
+        let doc = db.collection('sample').doc('aturing')
+        await doc.set({ name: 'Alan Turing' })
+
+        let snap = await doc.get()
+        console.log(snap)
+
+        assert.strictEqual(true,true);
     });
-  });
 });
+

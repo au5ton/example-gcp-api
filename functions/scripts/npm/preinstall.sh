@@ -8,7 +8,7 @@ if test -f ../config.json; then
     exit
 fi
 
-cat <<EOT >> ../config.json
+cat <<EOT > config.json
 {
     "gcp": {
         "datacenter": "us-central1",
@@ -17,4 +17,8 @@ cat <<EOT >> ../config.json
 }
 EOT
 
-printf "📣 ${YELLOW}config.json file generated. Fill all fields before deploying to Firebase!${NC}\n"
+cat <<EOT > .env
+GOOGLE_APPLICATION_CREDENTIALS=/some/json/file/firebase-adminsdk.json
+EOT
+
+printf "📣 ${YELLOW}config.json and .env files generated. Fill all fields before deploying to Firebase!${NC}\n"

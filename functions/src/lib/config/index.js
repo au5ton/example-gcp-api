@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const load = () => {
     try {
-        return JSON.parse(fs.readFileSync(path.join(__dirname, '..', '..', '..', '..', 'config.json')))
+        return JSON.parse(fs.readFileSync(path.join(__dirname, '..', '..', '..', 'config.json')))
     }
     catch(err) {
         return {

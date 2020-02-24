@@ -9,11 +9,6 @@
       "node \"$RESOURCE_DIR/scripts/firebase/postdeploy.js\""
     ]
   },
-  "emulators": {
-    "functions": {
-      "port": 5050
-    }
-  },
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
