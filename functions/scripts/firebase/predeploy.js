@@ -53,6 +53,4 @@ const chalk = require('chalk');
     console.log(stdout);
     console.log(stderr);
   
-    
-  
   })();

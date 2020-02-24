@@ -1,15 +1,9 @@
 
-const util = require('util');
-const readFile = util.promisify(require('fs').readFile);
-const path = require('path');
 const fetch = require('node-fetch');
 const snooze = ms => new Promise(resolve => setTimeout(resolve, ms));
+const config = require('../../src/lib/config');
 
 (async function() {
-  
-    
-    
-    const config = JSON.parse(await readFile(path.join(__dirname, '..', '..', '..', 'config.json')));
     
     /**
      * Do your own thing

@@ -10,10 +10,6 @@ fi
 
 cat <<EOT >> ../config.json
 {
-    "telegram": {
-        "bot_token": "",
-        "webhook_secret": ""
-    },
     "gcp": {
         "datacenter": "us-central1",
         "project_id": ""
