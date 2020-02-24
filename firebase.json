@@ -13,5 +13,9 @@
     "functions": {
       "port": 5050
     }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
   }
 }

@@ -1,5 +1,5 @@
 {
   "projects": {
-    "default": "serverless-tgbot-example"
+    "default": "serverless-api-example"
   }
 }
